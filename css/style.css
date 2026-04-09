@@ -1,0 +1,267 @@
+:root {
+	--gradient: linear-gradient(
+		to right,
+		hsl(6, 100%, 80%),
+		hsl(335, 100%, 65%)
+	);
+
+	--blue-200: hsl(243, 100%, 93%);
+	--blue-850: hsl(228, 56%, 26%);
+	--blue-950: hsl(229, 57%, 11%);
+	--blue-gray: hsl(229, 7%, 55%);
+}
+
+.color-gray {
+	color: var(--blue-gray);
+}
+
+.color-light {
+	color: var(--blue-200);
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+a,
+blockquote,
+summary {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Raleway", sans-serif;
+	font-size: 11px;
+	background: url("../images/bg-mobile.png") no-repeat center/cover;
+	height: 100svh;
+	display: grid;
+	grid-template-rows: 95% 5%;
+	text-align: center;
+}
+
+@media (min-width: 375px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	gap: 16px;
+}
+
+/* Section Actions */
+
+.actions {
+	background: var(--blue-850);
+	padding: 42px 36px;
+	margin-top: auto;
+	margin-inline: 20px;
+	border-radius: 12px 96px 12px 12px;
+	display: grid;
+	gap: 32px;
+}
+
+.actions__list {
+	display: flex;
+	gap: 20px;
+}
+
+.actions__list li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	width: 48px;
+	background: var(--blue-950);
+	border-radius: 8px;
+}
+
+.actions__list li:hover {
+	background: var(--blue-200);
+}
+
+/* Section Bar */
+
+.bar {
+	background: var(--blue-850);
+	margin-inline: 20px;
+	padding: 36px 30px;
+	border-radius: 12px;
+}
+
+.bar__texto {
+	padding-inline: 16px;
+	margin-bottom: 8px;
+}
+
+.bar {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	height: 190px;
+}
+
+.bar__bg {
+	height: 24px;
+	width: 100%;
+	background: var(--blue-950);
+	border-radius: 12px;
+	padding: 3px;
+	display: flex;
+}
+
+@keyframes fillBar {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 81.5%;
+	}
+}
+
+.bar__bg-bar {
+	height: 18px;
+	width: 81.5%;
+	background: var(--gradient);
+	border-radius: 9px;
+	position: relative;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	animation: fillBar 0.6s ease-out forwards;
+}
+
+.bar__bg-bar::after {
+	content: "";
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	right: 2px;
+}
+
+.bar__parameter {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.bar__storageleft {
+	background: white;
+	align-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 24px;
+	border-radius: 12px;
+	gap: 16px;
+	transition: transform 0.3s ease-out;
+	will-change: transform;
+}
+
+.bar__storageleft:hover {
+	transform: scale(1.1);
+}
+
+.bar__storageleft p {
+	color: black;
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+
+.bar__storageleft span {
+	font-weight: 700;
+	color: var(--blue-gray);
+	font-size: 0.875rem;
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+	body {
+		background-image: url("../images/bg-desktop.png");
+		background-color: var(--blue-950);
+		background-position: center bottom;
+		background-size: 100% 54%;
+	}
+
+	.container {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 2fr 3fr;
+		gap: 32px;
+		max-width: 960px;
+		margin: auto;
+		align-items: end;
+	}
+
+	.actions {
+		margin: 0;
+		width: 350px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.bar {
+		margin: 0;
+		text-align: left;
+		position: relative;
+		height: 165px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.bar__text {
+		padding-inline: 0;
+		margin-top: 16px;
+	}
+
+	.bar__parameter {
+		margin-bottom: 0;
+	}
+
+	.bar__storageleft {
+		position: absolute;
+		right: 32px;
+		top: -38px;
+		border-radius: 12px 12px 0 12px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+		transform-origin: bottom right;
+	}
+
+	.bar__storageleft::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 0px;
+		right: 0px;
+
+		border-left: 25px solid transparent;
+		border-right: 0px solid transparent;
+		border-top: 25px solid white;
+
+		transform: translate(0px, 20px);
+	}
+}
