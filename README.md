@@ -4,13 +4,18 @@
 
 [![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-Fylo%20Data%20Storage%20Component-2ec866?style=flat-square&logo=frontendmentor)](https://www.frontendmentor.io/challenges/fylo-data-storage-component-13d7Y4l91)
 
-## Table of Contents
-
-[Frontend Mentor - Fylo Data Storage Component](#frontend-mentor---fylo-data-storage-component)
+- [Frontend Mentor - Fylo Data Storage Component](#frontend-mentor---fylo-data-storage-component)
+	- [Overview](#overview)
+		- [Live Demo](#live-demo)
+	- [Frontend Mentor](#frontend-mentor)
+		- [The Challenge](#the-challenge)
+	- [Built Using](#built-using)
+	- [Author](#author)
+	- [License](#license)
 
 ## Overview
 
-I'm back to studying programming and I've started with the good old HTML and CSS. After finishing the course - and learning a bit of Tailwind - I'm tackling some [Frontend Mentor](https://www.frontendmentor.io) challenges to put into practice everything I've learned as I continue my studies.
+I'm back to studying programming and I've started with the good old HTML and CSS. After finishing the course I'm tackling some [Frontend Mentor](https://www.frontendmentor.io) challenges to put into practice everything I've learned as I continue my studies.
 
 ### Live Demo
 
@@ -34,21 +39,12 @@ Your users should be able to:
 
 Want some support on the challenge? [Join the Frontend Mentor community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
-## Commentary
-
-I've also decided to build some of the challenges with Tailwind CSS - including this one - since that's new to me. I know it's not the usual way to use Tailwind but it should be a good training.
-
-The most challenging part was the fact that I'm used to think Desktop first and worry about Mobile later but Tailwind is Mobile first, so I had to rewire my brain to think backwards.
-
-All in all, I think it got pretty close to the original design - except the mouse interactions, as I was testing out some Tailwind transitions.
-
-To think I used to hate these HTML and CSS challenges - back then when I first learned programming I just wanted to practice JavasScript - but here I am.
-
 ## Built Using
 
 - HTML
-- CSS - Flexbox - Grid
-- Tailwind CSS
+- CSS
+    - Flexbox
+    - Grid
 
 ## Author
 
