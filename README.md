@@ -19,7 +19,7 @@ I'm back to studying programming and I've started with the good old HTML and CSS
 
 ### Live Demo
 
-- [Live Demo](https://fuzz-lemon-drift.netlify.app)
+- [Live Demo](https://atomic-matcha-flite.netlify.app)
 
 ## Frontend Mentor
 
