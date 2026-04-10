@@ -9,6 +9,7 @@
 		- [Live Demo](#live-demo)
 	- [Frontend Mentor](#frontend-mentor)
 		- [The Challenge](#the-challenge)
+	- [Commentary](#commentary)
 	- [Built Using](#built-using)
 	- [Author](#author)
 	- [License](#license)
@@ -38,6 +39,12 @@ Your users should be able to:
 - View the optimal layout for the section depending on their device's screen size
 
 Want some support on the challenge? [Join the Frontend Mentor community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+
+## Commentary
+
+I still had to rely a bit on trial and error to get the layout right, I implemented the mobile first approach since this seems to be the standard nowadays, but I still think it's a bit counter intuitive most of the times.
+
+I added some hover feats and the progress bar to make it more interactive while also giving some visual cues to the user. Overall, I think it turned out better than I expected, but I know I can do better, so I'll keep practicing and improving my skills.
 
 ## Built Using
 
