@@ -2,7 +2,7 @@
 
 # Frontend Mentor - Fylo Data Storage Component
 
-[![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-Fylo%20Data%20Storage%20Component-2ec866?style=flat-square&logo=frontendmentor)](https://www.frontendmentor.io/challenges/fylo-data-storage-component-13d7Y4l91)
+[![Frontend Mentor](https://img.shields.io/badge/Frontend%20Mentor-Fylo%20Data%20Storage%20Component-2ec866?style=flat-square&logo=frontendmentor)](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n)
 
 - [Frontend Mentor - Fylo Data Storage Component](#frontend-mentor---fylo-data-storage-component)
 	- [Overview](#overview)
