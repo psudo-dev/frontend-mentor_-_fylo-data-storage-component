@@ -9,6 +9,33 @@
 	--blue-850: hsl(228, 56%, 26%);
 	--blue-950: hsl(229, 57%, 11%);
 	--blue-gray: hsl(229, 7%, 55%);
+	--white: white;
+
+	--font-family: "Raleway", sans-serif;
+
+	--fs-12: 0.75rem;
+	--fs-14: 0.875rem;
+	--fs-40: 2.5rem;
+
+	--sp-3: 0.1875rem;
+	--sp-8: 0.5rem;
+	--sp-10: 0.625rem;
+	--sp-12: 0.75rem;
+	--sp-14: 0.875rem;
+	--sp-16: 1rem;
+	--sp-18: 1.125rem;
+	--sp-20: 1.25rem;
+	--sp-24: 1.5rem;
+	--sp-32: 2rem;
+	--sp-36: 2.25rem;
+	--sp-42: 2.625rem;
+
+	--rad-8: 0.5rem;
+	--rad-12: 0.75rem;
+
+	--bar-24: 1.5rem;
+	--bar-18: 1.125rem;
+	--bar-14: 0.875rem;
 }
 
 .color-gray {
@@ -33,8 +60,8 @@ summary {
 }
 
 body {
-	font-family: "Raleway", sans-serif;
-	font-size: 11px;
+	font-family: var(--font-family);
+	font-size: var(--fs-12);
 	background: url("../images/bg-mobile.png") no-repeat center/cover;
 	height: 100svh;
 	display: grid;
@@ -44,7 +71,7 @@ body {
 
 @media (min-width: 375px) {
 	body {
-		font-size: 14px;
+		font-size: var(--fs-14);
 	}
 }
 
@@ -68,24 +95,36 @@ ul {
 .container {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
-	gap: 16px;
+	gap: var(--sp-16);
+}
+
+.visually-hidden {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 /* Section Actions */
 
 .actions {
 	background: var(--blue-850);
-	padding: 42px 36px;
+	padding: var(--sp-42) var(--sp-36);
 	margin-top: auto;
-	margin-inline: 20px;
+	margin-inline: var(--sp-20);
 	border-radius: 12px 96px 12px 12px;
 	display: grid;
-	gap: 32px;
+	gap: var(--sp-32);
 }
 
 .actions__list {
 	display: flex;
-	gap: 20px;
+	gap: var(--sp-20);
 }
 
 .actions__list li {
@@ -95,7 +134,8 @@ ul {
 	height: 48px;
 	width: 48px;
 	background: var(--blue-950);
-	border-radius: 8px;
+	border-radius: var(--rad-8);
+	cursor: pointer;
 }
 
 .actions__list li:hover {
@@ -106,29 +146,29 @@ ul {
 
 .bar {
 	background: var(--blue-850);
-	margin-inline: 20px;
-	padding: 36px 30px;
-	border-radius: 12px;
+	margin-inline: var(--sp-20);
+	padding: var(--sp-36) var(--sp-32);
+	border-radius: var(--rad-12);
 }
 
 .bar__texto {
-	padding-inline: 16px;
-	margin-bottom: 8px;
+	padding-inline: var(--sp-16);
+	margin-bottom: var(--sp-8);
 }
 
 .bar {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: var(--sp-12);
 	height: 190px;
 }
 
 .bar__bg {
-	height: 24px;
+	height: var(--bar-24);
 	width: 100%;
 	background: var(--blue-950);
-	border-radius: 12px;
-	padding: 3px;
+	border-radius: calc(var(--bar-24) / 2);
+	padding: var(--sp-3);
 	display: flex;
 }
 
@@ -142,10 +182,10 @@ ul {
 }
 
 .bar__bg-bar {
-	height: 18px;
+	height: var(--bar-18);
 	width: 81.5%;
 	background: var(--gradient);
-	border-radius: 9px;
+	border-radius: calc(var(--bar-18) / 2);
 	position: relative;
 	display: flex;
 	justify-content: end;
@@ -155,10 +195,10 @@ ul {
 
 .bar__bg-bar::after {
 	content: "";
-	height: 14px;
-	width: 14px;
-	border-radius: 50%;
-	background: white;
+	height: var(--bar-14);
+	width: var(--bar-14);
+	border-radius: calc(var(--bar-14) / 2);
+	background: var(--white);
 	position: absolute;
 	right: 2px;
 }
@@ -166,18 +206,18 @@ ul {
 .bar__parameter {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 16px;
+	margin-bottom: var(--sp-16);
 }
 
 .bar__storageleft {
-	background: white;
+	background: var(--white);
 	align-self: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 16px 24px;
-	border-radius: 12px;
-	gap: 16px;
+	padding: var(--sp-16) var(--sp-24);
+	border-radius: var(--rad-12);
+	gap: var(--sp-16);
 	transition: transform 0.3s ease-out;
 	will-change: transform;
 }
@@ -189,13 +229,13 @@ ul {
 .bar__storageleft p {
 	color: black;
 	font-weight: 700;
-	font-size: 2.5rem;
+	font-size: var(--fs-40);
 }
 
 .bar__storageleft span {
 	font-weight: 700;
 	color: var(--blue-gray);
-	font-size: 0.875rem;
+	font-size: var(--fs-14);
 }
 
 /* Desktop */
@@ -212,7 +252,7 @@ ul {
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 2fr 3fr;
-		gap: 32px;
+		gap: var(--sp-32);
 		max-width: 960px;
 		margin: auto;
 		align-items: end;
@@ -234,7 +274,7 @@ ul {
 
 	.bar__text {
 		padding-inline: 0;
-		margin-top: 16px;
+		margin-top: var(--sp-16);
 	}
 
 	.bar__parameter {
@@ -255,13 +295,11 @@ ul {
 		position: absolute;
 		width: 0;
 		height: 0;
-		bottom: 0px;
+		bottom: -20px;
 		right: 0px;
 
 		border-left: 25px solid transparent;
 		border-right: 0px solid transparent;
-		border-top: 25px solid white;
-
-		transform: translate(0px, 20px);
+		border-top: 25px solid var(--white);
 	}
 }
